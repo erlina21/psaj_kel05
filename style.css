@@ -1,0 +1,280 @@
+/* Reset default browser styles untuk konsistensi di semua browser */
+* {
+  margin: 0; /* Menghilangkan margin default */
+  padding: 0; /* Menghilangkan padding default */
+  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar/tinggi elemen */
+}
+
+/* Mengatur font dasar untuk seluruh halaman menggunakan Poppins dari Google Fonts */
+body {
+  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins untuk tampilan modern */
+  line-height: 1.6; /* Mengatur tinggi baris untuk keterbacaan yang baik */
+  color: #333; /* Warna teks utama abu-abu gelap untuk kontras */
+  background-color: #f8f9fa; /* Latar belakang putih keabu-abuan untuk kesan bersih */
+}
+
+/* Styling untuk header dan navigasi */
+header {
+  position: fixed; /* Membuat header tetap di atas saat scroll */
+  top: 0; /* Posisi di atas halaman */
+  width: 100%; /* Lebar penuh */
+  background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih transparan untuk efek modern */
+  backdrop-filter: blur(10px); /* Efek blur untuk tampilan kaca */
+  z-index: 1000; /* Memastikan header di atas elemen lain */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk kedalaman */
+}
+
+nav {
+  display: flex; /* Menggunakan flexbox untuk layout horizontal */
+  justify-content: space-between; /* Logo di kiri, link di kanan */
+  align-items: center; /* Vertikal center */
+  padding: 1rem 2rem; /* Padding dalam untuk ruang */
+  max-width: 1200px; /* Lebar maksimal untuk responsivitas */
+  margin: 0 auto; /* Center horizontal */
+}
+
+.logo {
+  font-size: 1.5rem; /* Ukuran font logo */
+  font-weight: 600; /* Tebal font */
+  color: #9c27b0; /* Warna ungu untuk logo */
+}
+
+.logo span {
+  color: #e91e63; /* Warna pink untuk bagian "lima" */
+}
+
+.nav-links {
+  list-style: none; /* Menghilangkan bullet list */
+  display: flex; /* Layout horizontal */
+  gap: 2rem; /* Jarak antar link */
+}
+
+.nav-links li a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: #333; /* Warna teks */
+  font-weight: 400; /* Berat font */
+  transition: color 0.3s; /* Transisi halus untuk hover */
+}
+
+.nav-links li a:hover {
+  color: #9c27b0; /* Warna ungu saat hover */
+}
+
+/* Styling untuk bagian hero */
+.hero-kelompok {
+  height: 100vh; /* Tinggi penuh viewport */
+  background: linear-gradient(135deg, #e0b3ff 0%, #ffb3ba 100%); /* Gradien ungu muda ke pink */
+  display: flex; /* Flexbox untuk center konten */
+  align-items: center; /* Vertikal center */
+  justify-content: center; /* Horizontal center */
+  text-align: center; /* Teks center */
+  position: relative; /* Untuk overlay */
+}
+
+.hero-overlay {
+  color: white; /* Teks putih */
+  z-index: 1; /* Di atas background */
+}
+
+.hero-overlay p:first-child {
+  font-size: 1.2rem; /* Ukuran font untuk welcome */
+  margin-bottom: 0.5rem; /* Margin bawah */
+}
+
+.hero-overlay h1 {
+  font-size: 3rem; /* Ukuran besar untuk judul */
+  font-weight: 600; /* Tebal */
+  margin-bottom: 1rem; /* Margin bawah */
+}
+
+.hero-overlay p:nth-child(3) {
+  font-size: 1.1rem; /* Ukuran untuk deskripsi */
+  margin-bottom: 2rem; /* Margin bawah */
+}
+
+.btn-cek {
+  display: inline-block; /* Inline block untuk button */
+  padding: 0.75rem 1.5rem; /* Padding dalam */
+  background-color: #e91e63; /* Pink untuk button */
+  color: white; /* Teks putih */
+  text-decoration: none; /* Tanpa garis bawah */
+  border-radius: 25px; /* Sudut bulat */
+  font-weight: 500; /* Berat font */
+  transition: background-color 0.3s; /* Transisi hover */
+}
+
+.btn-cek:hover {
+  background-color: #c2185b; /* Pink gelap saat hover */
+}
+
+/* Styling umum untuk section */
+.section-container {
+  padding: 4rem 2rem; /* Padding atas/bawah dan samping */
+  max-width: 1200px; /* Lebar maksimal */
+  margin: 0 auto; /* Center */
+}
+
+.bg-light {
+  background-color: #f8f9fa; /* Latar abu-abu terang */
+}
+
+.bg-white {
+  background-color: white; /* Latar putih */
+}
+
+.section-title {
+  text-align: center; /* Center judul */
+  font-size: 2.5rem; /* Ukuran besar */
+  font-weight: 600; /* Tebal */
+  color: #9c27b0; /* Ungu */
+  margin-bottom: 2rem; /* Margin bawah */
+}
+
+/* Styling untuk grid anggota kelompok */
+.kelompok-grid {
+  display: grid; /* Grid layout untuk kartu sejajar */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom responsif, minimal 300px */
+  gap: 2rem; /* Jarak antar kartu */
+}
+
+.kelompok-card {
+  background-color: white; /* Latar putih */
+  border-radius: 10px; /* Sudut bulat */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan */
+  overflow: hidden; /* Memotong konten yang keluar */
+  text-decoration: none; /* Tanpa garis bawah untuk link */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transisi hover */
+}
+
+.kelompok-card:hover {
+  transform: translateY(-5px); /* Angkat kartu saat hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar */
+}
+
+.card-img img {
+  width: 100%; /* Lebar penuh */
+  height: 200px; /* Tinggi tetap */
+  object-fit: cover; /* Potong gambar agar pas */
+}
+
+.card-info {
+  padding: 1.5rem; /* Padding dalam */
+  text-align: center; /* Center teks */
+}
+
+.card-info h3 {
+  font-size: 1.2rem; /* Ukuran nama */
+  color: #333; /* Warna teks */
+  margin-bottom: 0.5rem; /* Margin bawah */
+}
+
+.card-info p {
+  color: #666; /* Abu-abu untuk absen */
+  font-size: 0.9rem; /* Ukuran kecil */
+}
+
+/* Styling untuk bagian makalah/laporan */
+.content-wrapper {
+  display: flex; /* Flexbox untuk layout */
+  flex-direction: column; /* Vertikal */
+  align-items: center; /* Center */
+}
+
+.pdf-container {
+  width: 100%; /* Lebar penuh */
+  max-width: 800px; /* Maksimal lebar */
+  height: 600px; /* Tinggi tetap */
+  border-radius: 10px; /* Sudut bulat */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan */
+  margin-bottom: 2rem; /* Margin bawah */
+}
+
+.pdf-container iframe {
+  border-radius: 10px; /* Sudut bulat untuk iframe */
+}
+
+.content-desc {
+  text-align: center; /* Center teks */
+}
+
+.content-desc p {
+  font-size: 1rem; /* Ukuran font */
+  color: #666; /* Abu-abu */
+  margin-bottom: 1rem; /* Margin bawah */
+}
+
+/* Styling untuk bagian video */
+.video-wrapper {
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Vertikal */
+  align-items: center; /* Center */
+}
+
+.video-container {
+  width: 100%; /* Lebar penuh */
+  max-width: 800px; /* Maksimal */
+  height: 450px; /* Tinggi */
+  border-radius: 10px; /* Sudut bulat */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan */
+  margin-bottom: 1rem; /* Margin bawah */
+}
+
+.video-container iframe {
+  border-radius: 10px; /* Sudut bulat */
+}
+
+.video-desc p {
+  font-size: 1rem; /* Ukuran */
+  color: #666; /* Abu-abu */
+}
+
+/* Styling untuk footer */
+footer {
+  background-color: #9c27b0; /* Ungu gelap */
+  color: white; /* Teks putih */
+  text-align: center; /* Center */
+  padding: 1rem; /* Padding */
+  margin-top: 4rem; /* Margin atas */
+}
+
+/* Responsivitas untuk layar laptop dan lebih kecil */
+@media (max-width: 1024px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem; /* Ukuran judul lebih kecil */
+  }
+  
+  .section-title {
+    font-size: 2rem; /* Judul section lebih kecil */
+  }
+  
+  .kelompok-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kolom lebih kecil */
+  }
+  
+  .pdf-container, .video-container {
+    height: 400px; /* Tinggi lebih kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Nav vertikal di mobile */
+    padding: 1rem; /* Padding lebih kecil */
+  }
+  
+  .nav-links {
+    gap: 1rem; /* Jarak link lebih kecil */
+  }
+  
+  .hero-overlay h1 {
+    font-size: 2rem; /* Judul lebih kecil */
+  }
+  
+  .kelompok-grid {
+    grid-template-columns: 1fr; /* Satu kolom di mobile */
+  }
+  
+  .pdf-container, .video-container {
+    height: 300px; /* Tinggi lebih kecil */
+  }
+}
